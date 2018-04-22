@@ -1,0 +1,13 @@
+[Unit]
+Description=Masari Daemon
+After=network.target
+
+[Service]
+Type=forking
+GuessMainPID=no
+ExecStart=/usr/local/src/masari/build/release/bin/masarid --rpc-bind-ip 127.0.0.1 --detach --restricted-rpc
+Restart=always
+User=masaridaemon
+
+[Install]
+WantedBy=multi-user.target
