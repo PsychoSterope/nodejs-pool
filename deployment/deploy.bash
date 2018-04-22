@@ -26,8 +26,6 @@ sudo systemctl enable ntp
 cd /usr/local/src
 sudo git clone https://github.com/masari-project/masari.git
 cd masari
-
-curl https://raw.githubusercontent.com/PsychoSterope/nodejs-pool/master/deployment/masari_daemon.patch | sudo git apply -v
 sudo make -j$(nproc)
 sudo cp ~/nodejs-pool/deployment/masari.service /lib/systemd/system/
 sudo useradd -m masaridaemon -d /home/masaridaemon
