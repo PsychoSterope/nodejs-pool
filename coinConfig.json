@@ -32,5 +32,13 @@
     "name": "Aeon Coin",
     "mixIn": 4,
     "shortCode": "AEON"
+  },
+  "msr": {
+    "funcFile": "./lib/coins/msr.js",
+    "paymentFile": "./payment_systems/msr.js",
+    "sigDigits": 1000000000000,
+    "name": "Masari",
+    "mixIn": 12,
+    "shortCode": "MSR"
   }
 }
