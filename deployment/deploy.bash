@@ -30,7 +30,7 @@ sudo make -j$(nproc)
 sudo cp ~/nodejs-pool/deployment/masari.service /lib/systemd/system/
 sudo useradd -m masaridaemon -d /home/masaridaemon
 BLOCKCHAIN_DOWNLOAD_DIR=$(sudo -u masaridaemon mktemp -d)
-sudo -u masaridaemon wget --limit-rate=50m -O $BLOCKCHAIN_DOWNLOAD_DIR/blockchain.raw https://Remember.To.Change/blockchain.raw
+sudo -u masaridaemon wget --limit-rate=50m -O $BLOCKCHAIN_DOWNLOAD_DIR/blockchain.raw https://drive.google.com/uc?export=download&id=1Cvf2VTUIekW_jpzGKyuZTf_AhZW4vFub
 sudo -u masaridaemon /usr/local/src/masari/build/release/bin/masari-blockchain-import --input-file $BLOCKCHAIN_DOWNLOAD_DIR/blockchain.raw --batch-size 20000 --database lmdb#fastest --verify off --data-dir /home/masaridaemon/.bitmasari
 sudo -u masaridaemon rm -rf $BLOCKCHAIN_DOWNLOAD_DIR
 sudo systemctl daemon-reload
