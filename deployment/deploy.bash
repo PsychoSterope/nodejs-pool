@@ -28,11 +28,12 @@ sudo git clone https://github.com/PsychoSterope/masari
 cd masari
 sudo cmake .
 sudo make -j$(nproc)
+sudo chown -R msrpool: /usr/local/src/masari/bin
 sudo cp ~/nodejs-pool/deployment/masari.service /lib/systemd/system/
 sudo useradd -m masaridaemon -d /home/masaridaemon
 sudo systemctl daemon-reload
-sudo systemctl enable masari
-sudo systemctl start masari
+sudo systemctl enable masari.service
+sudo systemctl start masari.service
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 source ~/.nvm/nvm.sh
 nvm install v8.9.3
