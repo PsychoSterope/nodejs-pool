@@ -36,7 +36,7 @@ sudo systemctl enable masari.service
 sudo systemctl start masari.service
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 source ~/.nvm/nvm.sh
-nvm install v8.9.3
+nvm install v6.14.2
 cd ~/nodejs-pool
 npm install
 npm install -g pm2
