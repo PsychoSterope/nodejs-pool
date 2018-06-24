@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=forking
 GuessMainPID=no
-ExecStart=/usr/local/src/masari/bin/masarid --rpc-bind-ip 127.0.0.1 --detach --restricted-rpc
+ExecStart=/usr/local/src/masari/bin/masarid --rpc-bind-ip 127.0.0.1 --restricted-rpc
 Restart=always
 User=masaridaemon
 
