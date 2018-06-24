@@ -21,12 +21,12 @@ cd ~
 git clone https://github.com/PsychoSterope/nodejs-pool.git  # Change this depending on how the deployment goes.
 cd /usr/src/gtest
 sudo cmake .
-sudo make
+sudo make -j$(nproc)
 sudo mv libg* /usr/lib/
 cd ~
 sudo systemctl enable ntp
 cd /usr/local/src
-sudo git clone https://github.com/PsychoSterope/masari
+sudo git clone https://github.com/masari-project/masari
 cd masari
 sudo cmake .
 sudo make -j$(nproc)
